@@ -1,0 +1,638 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+
+int main()
+{
+
+
+	int areaChoice1;
+	int	direction;
+	int strategyChoice;
+	int doorChoice;
+	int areaChoice2;
+	int seijinChoice;
+	string glowingOrb;
+
+
+	int power = 19;
+	int	magic = 12;
+	int	speed = 10;
+	int	health = 50;
+
+
+	int d1HP = 20;
+	int	d2HP = 25;
+	int d3HP = 40;
+	int d4HP = 50;
+	int d5HP = 80;
+	int d6HP = 100;
+	int d7HP = 120;
+	int d8HP = 150;
+
+	string attChoice;
+	string attChoice2;
+
+	cout << "\t\t\t     Nick's Text Base Game     \n"
+
+
+		<< "You are a swordsman with magical abilities from another region. You travel and enter in to a town full of high volumes of thunder known as Raijin Toshi (Thunder City).\n"
+		<< " A loud thunderclap hits the town square, but you hear no commotion or loud screaming. You try\n"
+		<< " to leave but a barrier keeps you confined. You then decide to look around for townspeople and get some answers.\n"
+		<< "If you find people, they can help you out and explain what happend.\n\n";
+
+	do {
+		cout << " Where would you like to search? (Best to search areas before you pick 5) \n"
+			<< "1.  Grocery Store\n"
+			<< "2.  Restaurant\n"
+			<< "3.  Mall\n"
+			<< "4.  Bank\n"
+			<< "5.  Screw you guys, I'm breaking the barrier.\n\n"
+
+			<< "Please choose a number between 1-5 to search the desired area.\n\n";
+		cin >> areaChoice1;
+		cout << "\n";
+
+		switch (areaChoice1) {
+		case 1:
+			cout << "You enter through the sliding doors. You can't believe how big the Grocery store is; \n"
+				<< "however, you're also can't believe that they're no people in the store.\n"
+				<< "As you decide to stock up on some food for later, you notice a glowing, dark violet \n"
+				<< "orb as you rummage through the food items.\n\n"
+
+				<< "Would you like to pick the orb up?\n\n"
+				<< "Press 'y' for 'yes', or 'n' for 'no'\n";
+			cin >> glowingOrb;
+			cout << "\n";
+			if (glowingOrb == "y")
+			{
+				power += 5;
+				magic += 3;
+				speed += 2;
+				health += 10;
+
+				cout << "You pick up the orb. You feel a powerful but benevolent warmth through your body.\n"
+					<< "You feel like your overall stats have been amplified.\n\n"
+
+					<< "Your power is now at " << power << "\n"
+					<< "Your magic is now at " << magic << "\n"
+					<< "Your speed is now at " << speed << "\n"
+					<< "Your health is now at " << health << "\n\n";
+
+				cout << "After looking through the store, you decide to leave the area.\n\n";
+			}
+			else
+			{
+				cout << "You decided to ignore the orb and exit the store.\n\n";
+			}
+
+			break;
+		case 2:
+			cout << "As you enter the restaurant, you see a bizzare sight: Plates of food on tables\n"
+				<< "but no customers. You decided to check the kitchen in the back. No kitchen staff, but stoves and ovens are currently burning.\n"
+				<< "You turn off the stoves and ovens so the place wouldn't catch fire.\n"
+				<< "Nothing of use was found.\n"
+				<< "Your inner fatass decides to eat the food. The food was AMAZING. After eating, you exit the restaurant.\n\n";
+
+			break;
+		case 3:
+			power += 12;
+			magic += 16;
+			speed += 18;
+			health += 35;
+
+			cout << "You decide to enter the mall. As you enter the mall, you fall into an ensnarement trap.\n"
+				<< " You're caught in a net. All of a sudden, a mob started surrounding you with guns drawn\n"
+				<< " and blades unsheathed. As you explain that no one was in town and wants to know what happend, the mob started to get restless.\n"
+				<< " The mob doesn't believe you because you're armed. They get ready to kill you. \n"
+				<< " All of a sudden, you hear the sound of a gunshot. The mob stops dead in thier tracks. You could here a pin drop.\n"
+				<< " A beautiful, voluptuous women who fired the gun emerges from the shadows and starts to approach you. She takes a good minute to examine you. 'Release him!' Said the woman. \n"
+				<< " The mob then releases you from the net. She apologizes to you on behalf of the mob. \n"
+				<< " You figure out that she's the leader of the mob after they ceased thier attack.\n"
+				<< " You then repeat what you were trying to say to the mob earlier. She then explains that the thunder from the city is dangerous.\n"
+				<< " She said that the thunder turns people into immediate undead worshippers of an evil cult.\n"
+				<< " The woman then explained that she wants to escape the city, but a barrier is put on the city where you can enter, but you can't exit. \n"
+				<< " She then introduces herself. 'My name is Ray.' She notices something glowing on you. You take it out of your pocket.\n"
+				<< " She's suprised when you show her the orb. She explains that the orb you found is a missing piece of a puzzle to break the barrier.\n"
+				<< " Then she pulls out a similar shaped orb. Only difference is light teal, blue-sky like color.\n"
+				<< " Ray then makes a deal with you. She wants to join forces with you to escape from the city.\n"
+				<< " At first, you decline because you mention that its better to stay with her mob.\n"
+				<< " But then she rebuttels that she knows the city better than anyone.\n"
+				<< " She also mentions that the mob has a hiding place deep underneath the mall.\n"
+				<< " After faced with logic and beauty, you have no choice but to accept Ray's deal.\n"
+				<< " With the addition of Ray, your stats have increased!\n\n"
+				<< " Your stats are now: \n\n"
+				<< power << " Power\n"
+				<< magic << " Magic\n"
+				<< speed << " Speed\n"
+				<< health << " Health\n\n";
+
+			break;
+		case 4:
+			cout << "After searching the bank, all you can find is empty tellers, money on the floor, and vaults that are locked.\n"
+				<< "You find nothing of use in this area. You then decide to leave the bank. \n\n";
+			break;
+		case 5:
+			cout << "You decide to run to the barrier, heading towards the checkpoint.\n"
+				<< "You joined the two orbs\n"
+				<< "with your new found-ally Ray. \n\n";
+		}
+	} while (areaChoice1 != 5);
+
+	cout << "As you and Ray begin to merge your orbs together, the thunder struck down near both of you. \n"
+		<< "'Demons from the thunder are appearing!' Screams Ray. \n"
+		<< "The horde of demons runs towards the both of you. What would\n"
+		<< "you like to do? Run or Attack? (Please enter 'run' or 'attack')\n\n";
+	cout << "Demon HP: " << d1HP << "     Your HP: " << health << "\n\n";
+
+	cin >> attChoice;
+
+	if (attChoice == "run")
+	{
+		if (speed > 12)
+		{
+			cout << "You escape";
+		}
+		else
+		{
+			cout << "No running from here";
+		}
+	}
+	else
+	{
+		cout << "\t\t\t      Demon Battle Simulation     \n"
+
+
+			<< "\nYou attack the demons & do damage\n\n";
+		d1HP -= (1 + rand() % 6);
+		cout << "Demon horde HP: " << d1HP << "\n\n";
+		cout << "The demons group now attacks you and does damage\n\n";
+		health -= (1 + rand() % 6);
+		cout << "Your HP: " << health << "\n\n";
+		cout << "You attack the demons & do damage\n\n";
+		d1HP -= (1 + rand() + 6);
+		cout << "Demon horde HP: " << d1HP << "\n\n"
+
+			<< "After a hard fight, you begin to proceed forward. This \n"
+			<< "attack caused some damage and you now have " << health << " HP.\n\n";
+
+
+		do {
+			cout << "Now that you and Ray are safe for now, you need to decide\n"
+				<< "which direction you would like to travel:\n\n"
+				<< "1 - North\n"
+				<< "2 - South\n"
+				<< "3 - East\n"
+				<< "4 - West\n"
+				<< "Please enter 1-4.\n\n";
+
+			cin >> direction;
+
+			switch (direction)
+			{
+			case 1: cout << "You begin to travel North. After a long walk you see a\n"
+				<< "brightly lit structure in the foreground. You reach the structure\n"
+				<< "and find out that it is a hospital. You and Ray enter in the hosptial.\n"
+				<< "As you explore the floors of the empty hospital, the power cuts off due to lightning.\n"
+				<< "The feeling of walking through a dimly lit hospital sends shivers up your spine\n"
+				<< "as the feel of death surrounds you. You and Ray hear ghostly whales - you run towards the sound.\n"
+				<< "You and Ray check the 4th floor of the hospital room."
+				<< "You and Ray found the source. And what you discover was so horrifying.\n\n";
+
+				break;
+
+
+
+
+			case 2: cout << "You then travel South. However, you realise that this is\n"
+				<< "the way you originally came from, so you and Ray turn back.\n";
+				break;
+
+			case 3: cout << "You begin to travel East. However, after traveling for a while,\n"
+				<< "magenta-colored thunder struck down in your area and more demon appeared, you will have to fight this\n"
+				<< "time, so what stance would you like to take? Offensive of defensive?\n\n";
+				cout << "Demon HP: " << d2HP << "     Your HP: " << health << "\n\n";
+
+				cin >> attChoice2;
+
+				if (attChoice == "offensive")
+				{
+					cout << "\t\t\t      Demon Horde Attack     \n"
+
+
+						<< "\nYou attack the demon and does damage\n\n";
+					d2HP -= (2 + rand() % 6);
+					cout << "Demon horde HP: " << d2HP << "\n\n";
+					cout << "The demon horde now attacks you and does damage\n\n";
+					health -= (2 + rand() % 6);
+					cout << "Your HP: " << health << "\n\n";
+					cout << "You attack the demon and does damage\n\n";
+					d2HP -= (2 + rand() % 6);
+					cout << "Demon horde HP: " << d2HP << "\n\n"
+
+						<< "You begin to travel after the battle. After a long walk you see a\n"
+						<< "brightly lit structure in the foreground. You reach the structure\n"
+						<< "and find out that it is a hospital. You and Ray enter in the hosptial.\n"
+						<< "You make your way to the third floor.\n"
+						<< "As you explore the floors of the empty hospital, the power cuts off.\n"
+						<< "The feel of walking through a dimly lit hospital sends shivers\n"
+						<< "as the feel of death surrounds you. You and Ray hear ghostly whales - you run towards the sound.\n"
+						<< "You and Ray check the 3rd begin to collapse through a trap pooled with dark energy pit.\n"
+						<< "You and Ray are trapped in the dark energy as it begins to suck the life out of you.\n\n"
+
+						<< "\t\t\t      Game Over      \n\n\n\n";
+
+				}
+				else
+				{
+					cout << "\t\t\t      Demon Horde Attack     \n"
+
+
+						<< "\nYou attack the demon and does damage\n\n";
+					d2HP -= (2 + rand() % 6);
+					cout << "Demon horde HP: " << d2HP << "\n\n";
+					cout << "The demon horde now attacks you and does damage\n\n";
+					health -= (2 + rand() % 6);
+					cout << "Your HP: " << health << "\n\n";
+					cout << "You attack the demon and does damage\n\n";
+					d2HP -= (2 + rand() % 6);
+					cout << "Demon horde HP: " << d2HP << "\n\n"
+
+						<< "You begin to travel after the battle. After a long walk you see a\n"
+						<< "brightly lit structure in the foreground. You reach the structure\n"
+						<< "and find out that it is a hospital. You and Ray enter in the hosptial.\n"
+						<< "You make your way to the third floor.\n"
+						<< "As you explore the floors of the empty hospital, the power cuts off.\n"
+						<< "The feel of walking through a dimly lit hospital sends shivers\n"
+						<< "as the feel of death surrounds you. You and Ray hear ghostly whales - you run towards the sound.\n"
+						<< "You run to the 2nd floor room. Nothing but a security trap portal that sends you to a realm that you can't escape from."
+
+						<< "\t\t\t      Game Over      \n\n\n\n";
+
+				}
+				break;
+			case 4: cout << "You begin to travel West. However, you realise that there\n"
+				<< "is nothing to be found but a playground and field that's been damaged\n\n";
+				break;
+
+			default:
+				cout << "Incorrect entry.\n\n";
+				break;
+
+			}
+
+		} while (direction != 1);
+
+		power += 12;
+		magic += 16;
+		speed += 15;
+		health += 42;
+
+
+		cout << "You and Ray find out that they're spirits in the walls of the hospital.\n"
+			<< "You begin to cautiously talk to them. "
+			<< "They explain that they were meant as tributes to restore a legendary Raiden creature.\n"
+			<< "The spirits also mention that they're suffering souls, the body is dead but the soul is being torchured.\n"
+			<< "An image comes on the wall and it shows Ray's boyfriend and sister.\n"
+			<< "She begins to cry as she's shown the images of her boyfriend and sister.\n"
+			<< "'I vow to get revenge on the piece of trash who used you as tributes.'\n"
+
+			<< "'This is why I want to leave this city. So no more people I love get hurt'\n"
+			<< "Ray then explains to you.\n"
+			<< "You sense a new resolve in Ray as her orb starts to glow.\n"
+			<< "You somehow share the same resolve as her as your orb begins to glow.\n"
+			<< "Your were given a lead by the spirits to head to the center of town.\n"
+
+			<< "You stats have increased!\n"
+			<< power << " Power\n"
+			<< magic << " Magic\n"
+			<< speed << " Speed\n"
+			<< health << " Health\n\n";
+
+		do
+		{
+			cout << "You reached to the center of town. You see stronger, more powerful demons\n"
+				<< "wielding powerful weaponry."
+				<< "You said to Ray that its too risky to fight this many demon forces.\n"
+				<< "You and Ray manage to hideout in a blindspot to figure out what will be the strategy\n"
+				<< "to get past the demons patrolling the center of town.";
+
+			cout << " What will be the strategy to get past the demons?\n"
+				<< "1. Lure one by throwing a rock in the opposite direction that your in?\n"
+				<< "2. Lure one by throwing a rock in the direction that your hiding in?\n"
+				<< "3. Proceed to find another blindspot to see for another entarance?\n";
+
+
+			cout << "Please choose between 1-3.";
+
+			cin >> strategyChoice;
+			switch (strategyChoice) {
+			case 1:
+			{
+				cout << "You manage to throw the rock in the opposite direction that you're hiding in.\n"
+					<< "Only to get blind sighted by another guard who thrusts both blades into your hearts.\n"
+					<< "You and Ray bleed out and you begin to lose conscienceness as you turn into a demon.\n"
+
+					<< "GAME OVER!";
+
+				break;
+
+
+			case 2:
+
+				cout << "You manage to throw a rock in the direction that you're hiding in.\n"
+					<< "A demon is coming and you prepare for a sneak attack.\n"
+					<< "You catch the demon off guard and took its head clean\n"
+					<< "off with a single swipe of your blade.\n"
+					<< "You and Ray proceed to the next blind spot.\n"
+					<< "You spot an open window.\n"
+					<< "You and Ray manage to sneak by undetected and quietly jump through the window.";
+
+				
+
+
+
+			case 3:
+
+				cout << "You and Ray leave your blindspot in hopes to find another blindspot.\n"
+					<< "You manage to slip passed the demons, but as you're running, you notice 4 glowing cocoons on the ground.\n"
+					<< "As you approach them, the cocoons start to hatch.\n"
+					<< "Moth Demons start to ascend and start to attack you and Ray.\n"
+					<< "You have no choice but to engage in battle.";
+
+				cout << "\t\t\t      Demon Moth Attack     \n"
+
+
+					<< "\nYou attack the Demon Moth and does damage\n\n";
+				d4HP -= (4 + rand() % 8);
+				cout << "Demon Moth HP: " << d4HP << "\n\n";
+				cout << "The Demon Moth now attacks you and does damage\n\n";
+				health -= (4 + rand() % 8);
+				cout << "Your HP: " << health << "\n\n";
+				cout << "You attack the Demon Moth and does damage\n\n";
+				d4HP -= (4 + rand() % 8);
+				cout << "Demon Moth HP: " << d4HP << "\n\n"
+
+					<< "After defeating the Demon Moths, you and Ray sprint to the next corner\n"
+					<< "before you're both discovered."
+					<< "You see an unguarded open window.\n"
+					<< "You and Ray sneak undetected and jump through the window";
+
+				cin >> strategyChoice;
+				cout << "\n";
+
+
+				cout << "You scope around the area, Ray explains that this is an abandon church that's \n"
+					<< "being used by the demons.\n"
+					<< "You begin to search around for what can be used.\n"
+					<< "You see a giant metal door. You approach it, but it's locked.\n"
+					<< "You closely inspect the door. Besides 3 keys needed to open the door,"
+					<< "The both of you feel an ominous and sinister presence behind that giant door.\n";
+
+				cout << "You need to find the 2 keys that are locking the giant door.\n"
+					<< "You see 2 hallways with 2 regular sized doors.\n";
+
+
+
+
+				do
+				{
+					cout << "Which door would you like to check?\n"
+						<< "1. Left Door?\n"
+						<< "2. Right Door?\n"
+
+						<< "Please use the key numbers to search the desired Door.\n\n";
+					cin >> doorChoice;
+					cout << "\n";
+
+					switch (doorChoice)
+					{
+					case 1:
+						cout << "You approach to the left side of the hallway where the door is.\n"
+							<< "You open the door and see a supply closet"
+							<< "that has a key rack. Out of the normal silver coloured keys,\n"
+							<< "you find one that's a different colour.\n"
+							<< "A similar colour to your orb that you have.\n"
+							<< "You grab the key and you head back to the center.\n";
+
+						break;
+					}
+					switch (doorChoice)
+			case 2:
+				cout << "You decide to go to the door on the right.\n"
+					<< "As you open the door, you see a gruesome sight.\n"
+					<< "You see a torchure chamber; with the smell and sight of blood\n"
+					<< "and rotting flesh, you both begin your disturbing trek in the chamber.\n"
+					<< "You manage to retrieve a different coloured key, same colour as Ray's orb.\n"
+					<< "You begin to question why the keys are the same colour as the orbs.\n"
+					<< "As you begin to ponder, the executioner appears and begins to attack.\n";
+
+				cout << "\t\t\t      Executioner Attack     \n"
+
+
+					<< "\nYou attack the Executioner and does damage\n\n";
+				d5HP -= (5 + rand() % 10);
+				cout << "Demon Moth HP: " << d5HP << "\n\n";
+				cout << "The Executioner now attacks you and does damage\n\n";
+				health -= (5 + rand() % 10);
+				cout << "Your HP: " << health << "\n\n";
+				cout << "You attack the Executioner and does damage\n\n";
+				d5HP -= (5 + rand() % 10);
+				cout << "Executioner HP: " << d5HP << "\n\n";
+
+				cout << "You manage to kill the Executioner, but you sense a malevolent force in him.\n"
+					<< "The body is dead, but an even stronger force has emerged from the Executioner.\n"
+					<< "All of a sudden, the body starts to move on its own.\n"
+					<< "The Executioners eyes start to turn red; and his voice is filled with anger and rage.\n"
+					<< "You can tell he's much stronger.\n"
+					<< "You have no choice but to battle again.\n";
+
+				cout << "\t\t\t  Enraged Executioner Attack     \n"
+
+
+					<< "\nYou attack the Executioner and does damage\n\n";
+				d6HP -= (6 + rand() % 12);
+				cout << "Executioner HP: " << d6HP << "\n\n";
+				cout << "The Executioner now attacks you and does damage\n\n";
+				health -= (6 + rand() % 12);
+				cout << "Your HP: " << health << "\n\n";
+				cout << "You attack the Executioner and does damage\n\n";
+				d6HP -= (6 + rand() % 12);
+				cout << "Executioner HP: " << d6HP << "\n\n";
+
+				cout << "You successfully defeat the Enraged executioner. You and Ray take the keys\n"
+					<< "and regroup back at the door.\n";
+
+
+
+
+				break;
+
+
+
+
+				while (strategyChoice != 2 & 3);
+				} while (strategyChoice != 2 & 3);
+
+
+				do
+				{
+					cout << "You and Ray enter the locked door by putting the keys in the keyholes.\n"
+						<< "The door begins to open up.\n"
+						<< "You are greeted by a beautiful, onimous sight.\n"
+						<< "A giant mystic sentinal juggarnaut appears before thier eyes.\n"
+						<< "You begin to inspect it. As you begin to approach it,\n"
+						<< "The orbs begin to react on its own.\n"
+						<< "The sentinal begins to approach you and begins to attack.\n";
+
+					cout << "\t\t\t  Sentinal Attack     \n"
+
+
+						<< "\nYou attack the Sentinal and does damage\n\n";
+					d7HP -= (8 + rand() % 16);
+					cout << "Sentinal HP: " << d7HP << "\n\n";
+					cout << "The Sentinal now attacks you and does damage\n\n";
+					health -= (8 + rand() % 16);
+					cout << "Your HP: " << health << "\n\n";
+					cout << "You attack the Sentinal and does damage\n\n";
+					d7HP -= (8 + rand() % 16);
+					cout << "Sentinal HP: " << d7HP << "\n\n";
+
+
+					cout << "You manage to defeat the Sentinal, as its rock body starts to crumble.\n"
+						<< "But as the body starts to crumble, the shadows temporarily cascades a hidden figure with piercing red eyes.\n"
+						<< "As the shadows begin to disapade; a voluptuous, curvy figure is revealed.\n"
+						<< "You're stunned as such beauty came out of the Sentinal being.\n"
+						<< "'Alina, you're alive!' Screamed Ray.\n"
+						<< "Ray explains that Alina is her big sister. Ray mentioned that she thought she was dead.\n"
+						<< "She also mentioned that Alina tried to escape from the city a long time but no one was able to find her.\n"
+						<< "'Thank you, Ray!' Exclaimed Alina.\n"
+						<< "'I had a feeling you would come save me. Even if it did take a couple of years.'\n"
+						<< "'Who's the hansome hero you're traveling with?' Alina asked.\n"
+						<< "'I met him when he intruded in my territory.' Explained Ray.\n"
+						<< "'He didn't want to team up with me, but we both have powerful orbs that worked well together. If it wasn't for him, I wouldn't have got this far.'\n"
+						<< "'Long story short, I convinced him to team up to try to escape but decided to defeat this thing to save the city.'\n"
+						<< "'Hansome AND Heroic!' Exclaimed Alina.\n"
+						<< "You tell Alina to go to Ray's hiding spot. She complies, but not before giving you a kiss on the lips as a way of thanks for saving her.\n"
+						<< "As you're left stunned, you begin to blush a little. You turn to Ray and she's blushing even more than you.\n"
+						<< "An awkward silence ensues the two.\n"
+						<< "As thunder devestates with a boom, you both snap out of your temporary state of minds and proceed onward.";
+
+					cout << "You begin to look around the battle area you and Ray fought the Sentinal in.\n"
+						<< "Upon closer inspection, you see another key, but this one is rainbow coloured.\n"
+						<< "As you grab it, the key starts to glow.\n"
+						<< "The key's reacting to the orbs. You both pull out your orbs.\n"
+						<< "The key and orbs collide together to create a really colourful wormhole portal.\n"
+						<< "You both decide to enter the wormhole.";
+
+
+				
+				
+				
+				
+					cout << "As you and Ray enter the wormhole, you find yourselves falling as a fast rate.\n"
+						<< "Not knowing what to do, you grab Ray and shield her from the fall.\n"
+						<< "As you both free fall from a dangerous height, Ray's body begins to glow.\n"
+						<< "All of a sudden, she begins to sprout wings.\n"
+						<< "4 beautiful, angel like wings begins to spread out, as you and Ray fly to safety.\n"
+						<< "'How did you learn to fly?!' You ask Ray.\n"
+						<< "'I don't know!' Exlaimed Ray. 'I have no clue. I'm just as confused as you are.'\n"
+						<< "You leave the questions to ponder later. You begin to look around.\n"
+						<< "You see a giant bird like figure with wings flying around a temple as thunder booms the area.\n"
+						<< "You and Ray decide to fly to the temple.\n";
+
+				
+
+				
+					cout << "As you and Ray reach the temple, you are stopped by a mysterious hooded man.\n"
+						<< "'Please leave this temple.' The hooded man proclaims.\n"
+						<< "'It's very dangerous to be around this area. Our sacred winged beast, Seijin, has been ajitated.'\n"
+						<< "As you begin to explain what happend, the hooded man interrupts you mid speech."
+						<< "'I sense the power of the orbs on your 2 persons! Why do you have such powerful orbs?'\n"
+						<< "You and Ray try to explain, but the hooded man began accusing you of stealing and lying.\n"
+						<< "The hooded man removes his clothes and it reveals to be a powerful knight with mystic powers.\n"
+						<< "He begins to charge at you!\n";
+
+							cout << "\t\t\t  Knight Attack     \n"
+
+
+							<< "\nYou attack the Knight and does damage\n\n";
+						d8HP -= (10 + rand() % 20);
+						cout << "Knight HP: " << d8HP << "\n\n";
+						cout << "The Knight now attacks you and does damage\n\n";
+						health -= (10 + rand() % 20);
+						cout << "Your HP: " << health << "\n\n";
+						cout << "You attack the Knight and does damage\n\n";
+						d8HP -= (10 + rand() % 20);
+						cout << "Knight HP: " << d8HP << "\n\n";
+				
+				
+						cout << "You and Ray defeat the mysterious knight. He apologizes for accusing the heroes for stealing.\n"
+							<< "'My name is Reginald' introduced the knight.\n"
+							<< "Reginald then began to explain why he attacked us as soon as he saw the orbs.\n"
+							<< "'These orbs hold massive power, but they're also the objects needed to keep balance.'\n"
+							<< "'Notice how both orbs are different colours, violet and sky colour.'\n"
+							<< "'They represent balance of this world. And for those who steal it, the city that they live in will suffer.'\n"
+							<< "'That's why there was demons coming after us!' You exclaim.\n"
+							<< "'But who would steal such valuable items?' Ray added.\n"
+							<< "'The thief who stole these item was exiled and beheaded,but he managed to teleport the orbs to another land.' Said Reginald.\n"
+							<< "'We tried combing the lands to find any type of clues, and all we found was a rainbow key that ended up disappearing after.'\n"
+							<< "You show the rainbow key that you recieved after battling the sentinal.\n"
+							<< "'But why did I end up having wings?' Asked Ray.\n"
+							<< "Reginald then explained that having strong feelings for another gave her the power to fly.\n"
+							<< "'We were falling from a great height' You added. 'I guess when you saw I was willing to take the fall, you must have had strong feelings for me to carry on'.\n"
+							<< "'You like him.' Reginald added. 'Way more than an ally or even a friend. Why else did you save him with such power?'\n"
+							<< "Ray begins to blush in embarrassment.";
+				
+
+				
+				
+						cout << "Lighting once again devestates with a boom, snappinng both of out of infaturation.\n"
+							<< "You begin to ask Reginald what happend to the thief.\n"
+							<< "'We caught him and we put him to death by beheading' Said Reginald.\n"
+							<< "'But when he was caught, he used a spell that transported the orbs to a different world.'\n"
+							<< "'We interragated him, but he constantly stated that he doesn't know where he transported the orbs.'\n"
+							<< "'He just transported them without even knowing where it was going to be transported'\n"
+							<< "'After trying multiple methods of spells to get back the orbs, only to fail, we accepted that we can't get back the orbs.'\n"
+							<< "'And because of the imbalance of power, Seijin has become very angry and corrupted.'\n"
+							<< "'But by the looks of you two, I believe you two can restore the balance of this world and save yours.'\n"
+							<< "'All you need to do is conversate with Seijin.'"
+							<< "'What do we have to do?' Replied Ray.\n"
+							<< "'You have to conversate with Seijin.' Answered Reginald.\n"
+							<< "'One false move and your dead.'\n";
+							
+				}
+
+				do
+				{
+					cout << "You and Ray make your way into the temple. After showing the orbs to the devotees,\n"
+						<< "they guide you to the shrine of Seijin.\n"
+						<< "You begin to go outside the temple and you see a closer look at Seijin.\n"
+						<< "Seijin physical appearance is as follows: Head of a wolf with a body of a grizzly bear, 2 dragon claws on each hand,\n"
+						<< "2 talons for feet,a twin dragons tail and 8 rainbow colour angel wings that shine brightly.\n"
+						<< "A majestic and fearful creature indeed.";
+
+					cout << "You show the 2 orbs to Seijin to grab its attention.\n"
+						<< "Seijin begins to speak to you telepathically.\n"
+						<< "'Who are you 2 and why do you have my orbs!?'\n"
+						<< "At that moment, you realize that you need to choose your words wisely.";
+
+					cout << "What will you say Seijin?\n"
+						 1. << "Introduce yourselves.\n"
+						 2. << "Cut to the chase.\n"
+						 
+						 
+				
+				
+				}
+
+
+			}
+
+			system("pause");
+			return 0;
+			}
+
+
+		}
